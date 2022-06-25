@@ -27,12 +27,40 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnChanges {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-    selectMode: 'multi',
+    // selectMode: 'multi',
     // hideSubHeader: true,
     // actions: true,
     columns: {
       attributes: {
         title:'Attributes',
+        editor: {
+          type: 'list',
+          config: {
+            selectText: 'Select',
+            list: [
+              {value: 'Community members', title:'Community members'},
+              {value: 'Team', title:'Team'},
+              {value: 'Investors/share holders', title:'Investors/share holders'},
+              {value: 'Advisors', title:'Advisors'},
+              {value: 'Future team members', title:'Future team members'},
+              {value: 'future developments', title:'future developments'},
+              {value: 'Crowdsale', title:'Crowdsale'},
+              {value: 'public sale', title:'public sale'},
+              {value: 'Foundation', title:'Foundation'},
+              {value: 'Staking rewards', title:'Staking rewards'},
+              {value: 'Company Reserve', title:'Company Reserve'},
+              {value: 'Marketing', title:'Marketing'},
+              {value: 'Bounty program', title:'Bounty program'},
+              {value: 'Seed sale', title:'Seed sale'},
+              {value: 'Strategic sale', title:'Strategic sale'},
+              {value: 'Launchpad sale', title:'Launchpad sale'},
+              {value: 'Contingency', title:'Contingency'},
+              {value: 'Air drops', title:'Air drops'},
+              {value: 'Others', title:'Others'},
+              {value: 'Unallocated', title:'unallocated'},
+            ],
+          },
+        }
       },
       value:{
         title:'Value'
