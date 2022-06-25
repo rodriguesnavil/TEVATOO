@@ -11,6 +11,7 @@ import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChartsModule } from './charts/charts.module';
 import { UniswapComponent } from './uniswap/uniswap.component';
+import { CompoundComponent } from './compound/compound.component';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { UniswapComponent } from './uniswap/uniswap.component';
     PagesComponent,
     DashboardComponent,
     UniswapComponent,
+    CompoundComponent,
   ],
 })
 export class PagesModule {

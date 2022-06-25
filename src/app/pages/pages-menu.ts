@@ -14,6 +14,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Uniswap',
         link: '/pages/uniswap-allocation',
       },
+      {
+        title: 'Compound',
+        link: '/pages/compound-allocation',
+      },
     ],
   },
 ];
