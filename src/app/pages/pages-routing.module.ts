@@ -30,7 +30,7 @@ const routes: Routes = [{
     },
     {
       path: '',
-      redirectTo: 'charts/echarts',
+      redirectTo: 'dashboard',
       pathMatch: 'full',
     },
     {
