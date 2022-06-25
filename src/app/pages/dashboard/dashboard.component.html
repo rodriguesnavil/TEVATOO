@@ -1,1 +1,19 @@
-<p>dashboard works!</p>
+<nb-card>
+    <nb-card-body>
+        <ng-container *ngIf="chartsData; else noChartData">
+            <ngx-echarts-pie [options]="options"></ngx-echarts-pie>
+        </ng-container>
+        <ng-template #noChartData>
+            <h2>No data available</h2>
+        </ng-template>
+    </nb-card-body>
+</nb-card>
+
+<nb-card>
+    <nb-card-body>
+        <ng2-smart-table [settings]="settings" [source]="chartsData" 
+        (createConfirm)="addAttribute($event)" (deleteConfirm)="onDeleteConfirm($event)">
+        </ng2-smart-table>
+    </nb-card-body>
+</nb-card>
+
