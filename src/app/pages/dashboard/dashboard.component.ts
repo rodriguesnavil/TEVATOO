@@ -68,80 +68,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnChanges {
     },
   };
 
-  chartsData = [
-    // {
-    //   "attributes": "Community members",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Team",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Investors/share holders",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Advisors",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Future team members",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "future developments",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Crowdsale",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "public sale",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Staking rewards",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Company Reserve",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Marketing",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Bounty program",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Seed sale",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Strategic sale",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Launchpad sale",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Contingency",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Air drops",
-    //   "value": "5"
-    // },
-    // {
-    //   "attributes": "Others",
-    //   "value": "5"
-    // }
-  ];
+  chartsData = [];
 
   constructor(
     private theme: NbThemeService
@@ -153,11 +80,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnChanges {
       const colors = config.variables;
       const echarts: any = config.variables.echarts;
 
-      console.log(localStorage.getItem('piData'));
-
       this.chartsData = JSON.parse(localStorage.getItem('piData'));
-
-      console.log()
 
       let newArray = [];
       let legends = [];
@@ -174,6 +97,8 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnChanges {
         });
       }
 
+      console.log(`chartsdata  ${JSON.stringify(this.chartsData)}`)
+      console.log(`legends  ${JSON.stringify(this.chartsData)}`)
       
 
       this.options = {
@@ -182,7 +107,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnChanges {
         tooltip: {
           trigger: 'item',
           // formatter: '{a} <br/>{b} : {c} ({d}%)',
-          formatter: '{a} <br/>{b} : {c}',
+          formatter: '{a} <br/>{b}: {c}',
         },
         legend: {
           orient: 'vertical',
@@ -231,7 +156,6 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnChanges {
       this.chartsData = [];
     }
     this.chartsData.push(event.newData);
-    console.log(this.chartsData); 
     event.confirm.resolve();
     localStorage.setItem('piData', JSON.stringify(this.chartsData));
     this.ngOnInit();

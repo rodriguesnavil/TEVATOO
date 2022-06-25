@@ -10,6 +10,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChartsModule } from './charts/charts.module';
+import { UniswapComponent } from './uniswap/uniswap.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { ChartsModule } from './charts/charts.module';
   declarations: [
     PagesComponent,
     DashboardComponent,
+    UniswapComponent,
   ],
 })
 export class PagesModule {
