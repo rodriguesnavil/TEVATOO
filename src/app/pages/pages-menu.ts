@@ -18,6 +18,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Compound',
         link: '/pages/compound-allocation',
       },
+      {
+        title: 'Gelato',
+        link: '/pages/gelato-allocation',
+      },
     ],
   },
 ];

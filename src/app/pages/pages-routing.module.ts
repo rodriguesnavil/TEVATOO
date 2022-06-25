@@ -6,6 +6,7 @@ import { NotFoundComponent } from './miscellaneous/not-found/not-found.component
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UniswapComponent } from './uniswap/uniswap.component';
 import { CompoundComponent } from './compound/compound.component';
+import { GelatoComponent } from './gelato/gelato.component';
 
 const routes: Routes = [{
   path: '',
@@ -27,6 +28,10 @@ const routes: Routes = [{
     {
       path: 'compound-allocation',
       component: CompoundComponent,
+    },
+    {
+      path: 'gelato-allocation',
+      component: GelatoComponent
     },
     {
       path: '',
